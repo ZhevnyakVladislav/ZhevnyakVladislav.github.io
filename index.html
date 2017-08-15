@@ -8,6 +8,17 @@
     </head>
     <body>
         <div id="app"></div>
+		<script>
+			function setDefaultStorage(item) {
+                if (!localStorage.getItem(item)) {
+                    localStorage.setItem(item, JSON.stringify([]));
+                } else {
+                    return;
+                } 
+            };
+            setDefaultStorage('users');
+            setDefaultStorage('adverts');
+            setDefaultStorage('messages');
+		</script>
         <script src="./dist/main.bundle.js"></script>
-    </body>
 </html>
